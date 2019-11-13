@@ -1,5 +1,6 @@
 // VARIAVEIS
 
+
 public class Retângulo {
 
     private float length = 1.0f;
@@ -11,10 +12,6 @@ public class Retângulo {
 
     }
 
-    public Retângulo(float length) {
-        this.length = length;
-    }
-
     public Retângulo(float length, float width) {
         this.length = length;
         this.width = width;
@@ -22,15 +19,17 @@ public class Retângulo {
 
 
 //MÉTODOS
+
+
 public float getLength () {return length;}
 public float getWidth() {return width;}
 
 public void setLength(float length)  {this.length = length;}
 public void setWidth(float width) {this.width = width;}
-public double getArea() {return Math.PI * length * length;}
-public double getPerimeter() {return Math.PI * length * length;}
+public double getArea() {return length * width;}
+public double getPerimeter() {return width + length + width + length;}
 
     public String toString() {
-        return String.format("Retângulo: Length: 1.0f, Color= 1.0f, Area: 0.2f", length, width, getArea()); }
+        return String.format("Retângulo: Length: %f, Width= %f, Area:%f, Perimeter: %f", length, width, getArea(), getPerimeter()); }
 
 }
